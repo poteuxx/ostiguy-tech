@@ -248,6 +248,14 @@
       </div>
 
       <nav aria-label="Navigation principale">
+        <button onclick="document.body.classList.toggle('light')">🌙 / ☀️</button>
+
+<style>
+body.light{
+  background:#f5f5f5;
+  color:#111;
+}
+</style>
         <a class="btn" href="#services">Services</a>
         <a class="btn" href="#projets">Projets</a>
         <a class="btn" href="#contact">Contact</a>
@@ -355,6 +363,19 @@
             <a class="secondary" href="#" onclick="alert('Prochainement : formulaire de brief !')">Demander un devis</a>
           </div>
         </div>
+        <form action="mailto:ostiguytechnologie@gmail.com" method="post" enctype="text/plain">
+  <label>Nom</label>
+  <input type="text" name="Nom" required>
+  
+  <label>Email</label>
+  <input type="email" name="Email" required>
+  
+  <label>Message</label>
+  <textarea name="Message" rows="4" required></textarea>
+  
+  <button type="submit">Envoyer</button>
+</form>
+
 
         <div style="margin-top:14px;">
           <h3 style="margin:0 0 6px 0">Exemples rapides</h3>
@@ -386,6 +407,13 @@
         setTimeout(()=>{ if(el) el.style.boxShadow = ''; }, 900);
       }
     }, false);
+    <button onclick="navigator.clipboard.writeText('ostiguytechnologie@gmail.com')">
+  Copier mon email
+</button>
   </script>
+  <details>
+  <summary>Voir mes conditions de travail</summary>
+  <p>Je privilégie les missions courtes, forfaits clairs, prototypage rapide.</p>
+</details>
 </body>
 </html>
