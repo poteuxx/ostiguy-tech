@@ -1,1 +1,0 @@
-# ostiguy-tech
