@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demander un devis — Ostiguy Tech</title>
+  <meta name="description" content="Formulaire pour demander un devis chez Ostiguy Tech — Développeur web et applications minimalistes.">
+  <style>
+    :root {
+      --bg-color: #0e0e0e;
+      --text-color: #f5f5f5;
+      --accent: #00c8ff;
+      --input-bg: #1a1a1a;
+      --border: #333;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .container {
+      background: #111;
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+
+    p {
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      background: var(--input-bg);
+      color: var(--text-color);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #00e0ff;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Demander un devis</h1>
+    <p>Expliquez brièvement votre projet pour obtenir une estimation rapide.</p>
+
+    <form action="https://formspree.io/f/mnqypgyd" method="POST">
+      <input type="text" name="name" placeholder="Votre nom complet" required>
+      <input type="email" name="email" placeholder="Votre adresse email" required>
+      <input type="text" name="subject" placeholder="Sujet du projet (ex: Site Web, Application, etc.)" required>
+      <textarea name="message" placeholder="Décrivez votre projet, vos besoins ou vos idées..." required></textarea>
+      <button type="submit">Envoyer la demande</button>
+    </form>
+
+    <footer>© 2025 Ostiguy Tech — Développeur Web & Apps Minimalistes</footer>
+  </div>
+</body>
+</html>
